@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <img src="sad.png" alt="sad" id="img">
+    </center>
+    <script>
+        var a = document.getElementById("img");
+        a.addEventListener("mouseover", () => {
+            a.src = "smile.png";
+        });
+
+        a.addEventListener("mouseout", () => {
+            a.src = "sad.png";
+        });
+    </script>
+</body>
+
+</html>

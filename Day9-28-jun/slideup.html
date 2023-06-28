@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#flip").click(function () {
+                $("#panel").slideUp("slow");
+            });
+        });
+    </script>
+
+    <style type="text/css">
+        #panel , #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: aqua;
+            border:  2px solid black;
+        }
+
+        #panel{
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flip">Click to Slide down panel</div>
+    <div id="panel">Hello DHRUVIN</div>
+
+</body>
+
+</html>

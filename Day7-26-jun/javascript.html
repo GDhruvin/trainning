@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        function demoInternalAlert() {
+            alert("Internal Alert.");
+        }
+
+
+        function demoInternalConfirm() {
+            if (confirm("Are you sure..??")) {
+                alert("you choose OK");
+            }
+            else {
+                alert("you choose CANCEL");
+            }
+        }
+
+        function demoInternalPrompt() {
+            var fName = prompt("Enter Firstname Here..");
+            var lName = prompt("Enter Lastname Here..");
+            alert(fName + " " + lName);
+        }
+    </script>
+
+    <script src="index.js" type="text/javascript"></script>
+
+
+
+    <style type="text/css">
+        body {
+            background-color: yellow
+        }
+
+        div {
+            background-color: red;
+            height: 300px;
+            width: 300px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="D1">
+        Hello dhruvin
+    </div>
+
+
+    <input type="button" value="Alert Inline" onclick="alert('Hello Guys')" />
+    <input type="button" value="Confirm Inline" onclick="confirm('Are You Sure..??')" />
+    <input type="button" value="Prompt Inline" onclick="prompt('Enter Firstname Here..')" />
+
+    <hr>
+
+    <input type="button" value="Alert Internal" onclick="demoInternalAlert()" />
+    <input type="button" value="Confirm Internal" onclick="demoInternalConfirm()" />
+    <input type="button" value="Prompt Internal" onclick="demoInternalPrompt()" />
+
+    <hr>
+
+    
+    <input type="button" value="Alert Internal" onclick="demoenternalAlert()" />
+    <input type="button" value="Confirm Internal" onclick="demoenternalConfirm()" />
+    <input type="button" value="Prompt Internal" onclick="demoenternalPrompt()" />
+
+
+    <hr>
+    <input type="button" value="Body Bg Green" onclick="bodyBgGreen()">&nbsp;&nbsp;
+    <input type="button" value="Div Bg Gray" onclick="divBgGray()">
+    <hr>
+    <input type="button" value="Body Bg Prompt" onclick="bodyBgDynamic()">&nbsp;&nbsp;
+    <input type="button" value="Div Bg Prompt" onclick="divBgDynamic()">
+    <hr>
+    <input type="color" id="CP1" onchange="bodyBgCP1()">&nbsp;&nbsp;
+    <input type="color" id="CP2" onchange="divBgCP2()">
+    <hr>
+    <input type="button" value="Find Max Value" onclick="demo1()">&nbsp;&nbsp;
+    <input type="button" value="Find area of circle" onclick="demo2()">
+</body>
+
+</html>

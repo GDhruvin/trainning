@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+          padding: 10px;
+        }
+      </style>
+</head>
+<body>
+    <center>
+    <table border="1" celipadding="'10" width="40%">
+        <tr>
+          <td align="center">Array :</td>
+          <td align="center"><input type="text" id="array_content" size="50"></td>
+        </tr>
+        <tr>
+          <td align="center">push : </td>
+          <td align="center"><input type="text" placeholder="enter num to push" id="push_item"> <input type="button" value="PUSH" id="btn_push"> <p>New element added at last</p></td>
+        </tr>
+        <tr>
+          <td align="center">POP : </td>
+          <td align="center"><input type="button" value="click to pop" id="btn_pop"> <p>Last element of the array will be remove</p></td>
+        </tr>
+        <tr >
+          <td align="center">UnShift : </td>
+          <td align="center"><input type="text" placeholder="enter num to UnShift" id="unshift_item"> <input type="button" value="Unshift" id="btn_unshift"> <p>New element added at First</p></td>
+        </tr>
+        <tr>
+          <td align="center">Shift : </td>
+          <td align="center"><input type="button" value="click to Shift" id="btn_shift"> <p>find element of the array will be remove</p></td>
+        </tr>
+        <tr>
+          <td align="center">Sort : </td>
+          <td align="center"><input type="button" value="Sort Array" id="btn_sort"></td>
+        </tr>
+        <tr>
+          <td align="center">Reverse : </td>
+          <td align="center"><input type="button" value="Reverse" id="btn_reverse"></td>
+        </tr>
+        <tr>
+          <td align="center">Concat : </td>
+          <td align="center"><input type="text" placeholder=" "  value="mahesh,panchal,25,male" id="merge"><input type="button" value="merge Array" id="btn_merge"><br><br> <input type="text"  id="array_merge" size="50"></td>
+        </tr>
+      </table>
+    </center>
+
+
+    <script>
+        var array_content = document.getElementById("array_content");
+        var push_item = document.getElementById("push_item");
+        var array = ["sandip" , "patel" , "20" , "male" , "ahemdabad"];
+        var btn_push = document.getElementById("btn_push");
+        var btn_pop = document.getElementById("btn_pop");
+        var unshift_item = document.getElementById("unshift_item");
+        var btn_unshift = document.getElementById("btn_unshift");
+        var btn_shift = document.getElementById("btn_shift");
+        var btn_sort = document.getElementById("btn_sort");
+        var btn_reverse = document.getElementById("btn_reverse");
+        var merge = document.getElementById("merge");
+        var btn_merge = document.getElementById("btn_merge");
+        var array_merge = document.getElementById("array_merge");
+
+        
+        array_content.value = array;
+        btn_push.addEventListener("click" , () => {
+            array.push(push_item.value);
+            array_content.value = array;
+        });
+
+        btn_pop.addEventListener("click" , () => {
+            array.pop();
+            array_content.value = array;
+        });
+
+        btn_unshift.addEventListener("click" , () => {
+            
+            array.unshift(unshift_item.value);
+            array_content.value=array;
+        });
+
+        btn_shift.addEventListener("click" , () => {
+            
+            array.shift();
+            array_content.value=array;
+        });
+
+        btn_sort.addEventListener("click" , () => {
+            
+            array.sort();
+            array_content.value=array;
+        });
+
+        btn_reverse.addEventListener("click" , () => {
+            
+            array.reverse();
+            array_content.value=array;
+        });
+
+        btn_merge.addEventListener("click" , () => {
+            
+            // array.concat(merge.value);
+            array_merge.value=array.concat(merge.value);
+
+        });
+
+    </script>
+</body>
+</html>
